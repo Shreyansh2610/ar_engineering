@@ -13,8 +13,8 @@
     {{-- <link rel="apple-touch-icon" href="{{ asset('images/ico/apple-icon-120.png') }}"> --}}
 
     <!-- Favicons -->
-    <link href="{{ asset('theme/assets/img/favicon.png') }}" rel="icon" />
-    <link href="{{ asset('theme/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
+    <link href="{{ asset('favicon.ico') }}" rel="icon" />
+    <link href="{{ asset('apple-touch-icon.png') }}" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
