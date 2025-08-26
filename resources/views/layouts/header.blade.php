@@ -22,12 +22,12 @@
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">Green</h1>
+                <h1 class="sitename">{{ env('APP_NAME') }}</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="{{ route('home') }}" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Products</a></li>
                     <li><a href="#portfolio">Infrastructure</a></li>
