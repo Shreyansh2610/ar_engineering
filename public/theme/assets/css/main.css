@@ -19,7 +19,7 @@
 }
 
 /* Global Colors - Updated with Blue & Green Theme from AR Engineering */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #333333; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2c5282; /* Deep blue color for headings - matches the business card blue */
@@ -60,6 +60,17 @@
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #8bc34a;
+}
+
+.bg-accent {
+  --bs-bg-opacity: 0.5;
+  /* background-color: rgba(#7cb342, var(--bs-bg-opacity)) !important; */
+  background: #7cb342 !important;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .blue-background {
@@ -902,8 +913,8 @@ section,
 
 .hero .carousel-item:before {
   content: "";
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--primary-blue), transparent 20%) 0%, 
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--primary-blue), transparent 20%) 0%,
     color-mix(in srgb, var(--accent-color), transparent 30%) 100%);
   position: absolute;
   inset: 0;
