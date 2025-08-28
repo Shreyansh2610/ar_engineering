@@ -8,6 +8,16 @@
 @section('vendor-styles')
 @endsection
 @section('page-styles')
+    <style>
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover .opacity-0 {
+            opacity: 0.85 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
 @endsection
 @section('content')
     <main class="main">
@@ -207,33 +217,39 @@
 
         <!-- Services Section -->
         <section id="services" class="services section">
-            <div class="container" data-aos="fade-up">
+            <div class="container section-title text-center" data-aos="fade-up">
                 <h2>Services</h2>
                 <p>
-                    Necessitatibus eius consequatur ex aliquid fuga eum
-                    quidem sint consectetur velit
+                    At AR Engineering, we provide a wide range of precision engineering services including CNC and VMC
+                    machining, forging, casting, and new product development. Our focus is on delivering high-quality,
+                    reliable, and customized components that meet the unique needs of diverse industries. With advanced
+                    technology, strict quality control, and a commitment to timely delivery, we ensure every product exceeds
+                    customer expectations.
                 </p>
+            </div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card h-100 position-relative overflow-hidden">
-                            <img src="https://picsum.photos/400/250?random=1" class="card-img-top w-100 h-100" height="200px" alt="Sample Image">
-                            {{-- <div class="card-body">
+                    @for ($i = 1; $i <= 15; $i++)
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 position-relative overflow-hidden">
+                                <img src="{{ asset('images/services/services_' . sprintf('%02d', $i) . '.png') }}"
+                                    class="card-img-top w-100 h-100" height="200px" alt="Sample Image">
+                                {{-- <div class="card-body">
                                 <h5 class="card-title">Hover Me!</h5>
                                 <p class="card-text">This card has a fade-up overlay effect on hover.</p>
                             </div> --}}
 
-                            <!-- Hover overlay that fades up -->
-                            <div
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-90 d-flex align-items-center justify-content-center text-white text-center opacity-0 translate-y-100 transition-all">
-                                <div class="p-4">
-                                    <h4 class="fw-bold">Hello There!</h4>
-                                    <p class="mb-3">This text appears with a smooth fade-up animation when you hover over
-                                        the card.</p>
-                                    <button class="btn btn-light">Learn More</button>
+                                <!-- Hover overlay that fades up -->
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-accent bg-opacity-90 d-flex align-items-center justify-content-center text-white text-center opacity-0 translate-y-100 transition-all">
+                                    <div class="p-4">
+                                        <h3 class="fw-bold"><strong>{{ $imageDescription[$i] }}</strong></h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endfor
+
                 </div>
             </div>
         </section>
@@ -321,7 +337,8 @@
                                 <div class="col-lg-8 col-md-10 text-center">
                                     <i class="fas fa-quote-left fs-1 mb-4 opacity-50"></i>
                                     <blockquote class="blockquote">
-                                        <p class="fs-5 mb-4">{{ env('APP_NAME') }} understands customized requirements very
+                                        <p class="fs-5 mb-4">{{ env('APP_NAME') }} understands customized requirements
+                                            very
                                             well. They provided forged and machined parts exactly as per our design within
                                             the deadline. Highly recommended for industrial parts.</p>
                                     </blockquote>

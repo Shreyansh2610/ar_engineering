@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function homePage() {
-        return view('pages.home');
+        $imageDescription = $this->imageDescription();
+        return view('pages.home',compact('imageDescription'));
     }
 
     public function imageDescription() {
