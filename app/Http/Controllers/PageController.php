@@ -11,6 +11,10 @@ class PageController extends Controller
         return view('pages.home',compact('imageDescription'));
     }
 
+    public function aboutUsPage () {
+        return view('pages.aboutus');
+    }
+
     public function imageDescription() {
         return [
             1 => 'V Type Groove Pulley',

@@ -215,45 +215,6 @@
         </section>
         <!-- /About Section -->
 
-        <!-- Services Section -->
-        <section id="services" class="services section">
-            <div class="container section-title text-center" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>
-                    At AR Engineering, we provide a wide range of precision engineering services including CNC and VMC
-                    machining, forging, casting, and new product development. Our focus is on delivering high-quality,
-                    reliable, and customized components that meet the unique needs of diverse industries. With advanced
-                    technology, strict quality control, and a commitment to timely delivery, we ensure every product exceeds
-                    customer expectations.
-                </p>
-            </div>
-            <div class="container">
-                <div class="row">
-                    @for ($i = 1; $i <= 15; $i++)
-                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="150">
-                            <div class="card h-100 position-relative overflow-hidden">
-                                <img src="{{ asset('images/services/services_' . sprintf('%02d', $i) . '.png') }}"
-                                    class="card-img-top w-100 h-100" height="200px" alt="Sample Image">
-                                {{-- <div class="card-body">
-                                <h5 class="card-title">Hover Me!</h5>
-                                <p class="card-text">This card has a fade-up overlay effect on hover.</p>
-                            </div> --}}
-
-                                <!-- Hover overlay that fades up -->
-                                <div
-                                    class="position-absolute top-0 start-0 w-100 h-100 bg-accent bg-opacity-90 d-flex align-items-center justify-content-center text-white text-center opacity-0 translate-y-100 transition-all">
-                                    <div class="p-4">
-                                        <h3 class="fw-bold"><strong>{{ $imageDescription[$i] }}</strong></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endfor
-
-                </div>
-            </div>
-        </section>
-        <!-- /Services Section -->
 
         <section class="py-5 accent-background">
             <div class="container">
